@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Fruits List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-expandable-content *ngFor="let f of fruitsList" tittle="{{f.name}}">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <img src="../../../assets/fruits/{{f.image}}">
+        </ion-col>
+        <ion-col>
+          <ion-text>
+              {{f.description}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6"></ion-col>
+        <ion-col>
+          <ion-button (click)="goToDetails(f);">
+            <strong>
+              View details
+            </strong>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </app-expandable-content>
+</ion-content>

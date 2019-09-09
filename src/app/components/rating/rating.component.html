@@ -1,0 +1,17 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button color="success" (click)="vote(true);">
+        <ion-icon name="md-thumbs-up"></ion-icon>
+        {{sum}}
+      </ion-button>
+      <ion-button color="danger" (click)="vote(false);">
+        <ion-icon name="md-thumbs-down"></ion-icon>
+        {{rem}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-text class="ion-padding">
+    {{media}} / 10
+  </ion-text>
+</ion-grid>

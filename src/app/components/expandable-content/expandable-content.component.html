@@ -1,0 +1,18 @@
+<ion-card>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <div class="my-button">
+        <ion-button (click)="showContent();">
+          <ion-icon name="md-add" [hidden]="show"></ion-icon>
+          <ion-icon name="md-remove" [hidden]="!show"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="my-tittle ion-padding-horizontal">
+        <h2>{{tittle}}</h2>
+      </div>
+    </ion-row>
+    <div class="ion-padding-top" [hidden]="!show">
+      <ng-content></ng-content>
+    </div>
+  </ion-grid>
+</ion-card>

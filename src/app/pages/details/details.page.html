@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <img src="../../../assets/fruits/{{photo}}">
+  </div>
+  <ion-text>
+    <p>{{description}}</p>
+  </ion-text>
+
+  <div>
+    <app-rating sum="0" rem="0" ></app-rating>
+  </div>
+</ion-content>

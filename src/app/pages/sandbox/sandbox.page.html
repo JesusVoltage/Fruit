@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>sandbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text>
+    <h2 class="ion-padding-horizontal">Expandable contents</h2>
+  </ion-text>
+
+
+  <app-expandable-content tittle="Tittle1" (opened)="onOpened($event)">
+    Content1
+  </app-expandable-content>
+  <app-expandable-content tittle="Tittle2" (opened)="onOpened($event)">
+    Content2
+  </app-expandable-content>
+  <app-expandable-content tittle="Tittle3" (opened)="onOpened($event)">
+    Content3
+  </app-expandable-content>
+  <app-expandable-content tittle="Tittle4" (opened)="onOpened($event)">
+    Content4
+  </app-expandable-content>
+  <ion-text class="ion-padding-horizontal">
+    Number of expanded: {{counter}}
+  </ion-text>
+
+
+  <ion-text>
+    <h2 class="ion-padding-horizontal">Rating</h2>
+  </ion-text>
+
+  <app-rating sum="0" rem="0" (sumUp)="controlSum($event);" (remUp)="controlRem($event)"></app-rating>
+  <app-rating sum="1" rem="0" (sumUp)="controlSum($event);" (remUp)="controlRem($event)"></app-rating>
+  <app-rating sum="0" rem="2" (sumUp)="controlSum($event);" (remUp)="controlRem($event)"></app-rating>
+  <app-rating sum="3" rem="1" (sumUp)="controlSum($event);" (remUp)="controlRem($event)"></app-rating>
+<hr>
+  <ion-text class="ion-padding control">
+    Up votes sum: {{counterSum}}
+  </ion-text>
+  <br><br>
+  <ion-text class="ion-padding control">
+    Down votes sum: {{counterRem}}
+  </ion-text>
+
+</ion-content>
